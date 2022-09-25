@@ -20,10 +20,10 @@ const AroundYou = () => {
   
 
     useEffect(()=>{
-        // geo api key  :::  at_CXNqoz7IzGHuvYyKPjVjPtnSqUD3N
+        
  
 
-       axios.get('https://geo.ipify.org/api/v2/country?apiKey=at_CXNqoz7IzGHuvYyKPjVjPtnSqUD3N').then((res)=>setCountry(res?.data?.location?.country)).catch((err)=>console.log(err)).finally(()=>setLoading(false));
+       axios.get(process.env.GEO_API_KEY1).then((res)=>setCountry(res?.data?.location?.country)).catch((err)=>console.log(err)).finally(()=>setLoading(false));
 
     },[country]);
 

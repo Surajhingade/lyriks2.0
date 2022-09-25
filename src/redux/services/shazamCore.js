@@ -20,7 +20,8 @@ import {createApi,fetchBaseQuery} from '@reduxjs/toolkit/query/react'
         baseQuery:fetchBaseQuery({
             baseUrl:'https://shazam-core.p.rapidapi.com/v1',
             prepareHeaders:(headers)=>{
-                headers.set('X-RapidAPI-key','4e97f9410emsh3a39a560ed8f58cp161d57jsn1341d8306c98');
+                headers.set('X-RapidAPI-key',process.env.VITE_SHAZAM_CORE_RAPID_API_KEY);
+                // process.env key is available on .env file 
 
                 return headers;
             }
